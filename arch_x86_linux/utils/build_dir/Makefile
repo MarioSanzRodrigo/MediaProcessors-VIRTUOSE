@@ -1,0 +1,56 @@
+# This is an automatically generated file. Do not modify.
+
+PREFIX = /home/mario/Documentos/github/MediaProcessors_selfcontained/_install_dir_x86
+SRCDIR = /home/mario/Documentos/github/MediaProcessors_selfcontained/arch_x86_linux/utils/../../MediaProcessors/utils/src
+BUILDDIR = /home/mario/Documentos/github/MediaProcessors_selfcontained/arch_x86_linux/utils/build_dir
+
+# Specify interpreter
+SHELL = /bin/sh
+
+INCLUDE_DIR = $(PREFIX)/include
+LIB_DIR = $(PREFIX)/lib
+LIBNAME = mediaprocsutils
+
+CFLAGS+=-I$(INCLUDE_DIR)
+# 32 /64 bits architecture stuff ...
+LBITS := $(shell getconf LONG_BIT)
+ifeq ($(LBITS),64)
+   # 64 bit stuff here
+   CFLAGS+=-fPIC -D_LARGE_FILE_API -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64
+else
+   # 32 bit stuff here
+endif
+
+LIBS=-lm -ldl -L$(LIB_DIR) -luriparser
+
+_OBJ = $(wildcard $(SRCDIR)/*.c*)
+OBJ = $(patsubst $(SRCDIR)/%.c*,$(BUILDDIR)/%.o,$(_OBJ))
+
+.PHONY : $(SRCDIR) $(BUILDDIR)
+
+all: build
+
+config:
+	@mkdir -p $(PREFIX)
+	@mkdir -p $(INCLUDE_DIR)
+	@mkdir -p $(INCLUDE_DIR)/lib$(LIBNAME)
+	@mkdir -p $(LIB_DIR)
+	@mkdir -p $(BUILDDIR)
+
+build: config
+	@if [ ! -f $(LIB_DIR)/lib$(LIBNAME).so ] ; then \
+		$(MAKE) $(BUILDDIR)/lib$(LIBNAME).so; \
+	fi
+
+$(BUILDDIR)/%.o: $(SRCDIR)/%.c*
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+$(BUILDDIR)/lib$(LIBNAME).so: $(OBJ)
+	$(CC) -o $@ $^ -shared -Bdynamic $(CFLAGS) $(LIBS)
+
+install:
+	cp $(BUILDDIR)/lib$(LIBNAME).so $(LIB_DIR)/lib$(LIBNAME).so;
+	cp -a $(SRCDIR)/*.h $(INCLUDE_DIR)/lib$(LIBNAME)/;
+
+clean:
+	rm -rf $(LIB_DIR)/lib$(LIBNAME).so $(INCLUDE_DIR)/lib$(LIBNAME)

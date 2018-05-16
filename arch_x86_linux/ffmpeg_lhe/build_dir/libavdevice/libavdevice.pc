@@ -1,0 +1,14 @@
+prefix=/home/mario/Documentos/github/MediaProcessors_selfcontained/_install_dir_x86
+exec_prefix=${prefix}
+libdir=/home/mario/Documentos/github/MediaProcessors_selfcontained/_install_dir_x86/lib
+includedir=/home/mario/Documentos/github/MediaProcessors_selfcontained/_install_dir_x86/include
+
+Name: libavdevice
+Description: FFmpeg device handling library
+Version: 58.0.100
+Requires: 
+Requires.private: libavfilter >= 7.0.101, libswscale >= 5.0.101, libpostproc >= 55.0.100, libavformat >= 58.0.102, libavcodec >= 58.1.100, libswresample >= 3.0.100, libavutil >= 56.0.100
+Conflicts:
+Libs: -L${libdir}  -lavdevice 
+Libs.private: -lm -lxcb -lxcb-shape -lxcb -lxcb-xfixes -lxcb-render -lxcb-shape -lxcb -lasound
+Cflags: -I${includedir}

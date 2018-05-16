@@ -1,0 +1,12 @@
+prefix=
+exec_prefix=
+libdir=${pcfiledir}/../../../libavformat
+includedir=/home/mario/Documentos/github/MediaProcessors_selfcontained/3rdplibs/LHE_c
+
+Name: libavformat
+Description: FFmpeg container format library
+Version: 58.0.102
+Requires:  libavcodec >= 58.1.100,  libswresample >= 3.0.100,  libavutil >= 56.0.100
+Conflicts:
+Libs: -L${libdir} -Wl,-rpath,${libdir} -lavformat 
+Cflags: -I${includedir}

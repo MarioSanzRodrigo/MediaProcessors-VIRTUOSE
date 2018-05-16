@@ -1,0 +1,14 @@
+prefix=/home/mario/Documentos/github/MediaProcessors_selfcontained/_install_dir_x86
+exec_prefix=${prefix}
+libdir=/home/mario/Documentos/github/MediaProcessors_selfcontained/_install_dir_x86/lib
+includedir=/home/mario/Documentos/github/MediaProcessors_selfcontained/_install_dir_x86/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 7.0.101
+Requires: 
+Requires.private: libswscale >= 5.0.101, libpostproc >= 55.0.100, libavformat >= 58.0.102, libavcodec >= 58.1.100, libswresample >= 3.0.100, libavutil >= 56.0.100
+Conflicts:
+Libs: -L${libdir}  -lavfilter 
+Libs.private: -pthread -lm
+Cflags: -I${includedir}

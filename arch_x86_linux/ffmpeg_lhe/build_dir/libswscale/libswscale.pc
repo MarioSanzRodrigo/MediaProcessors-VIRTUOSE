@@ -1,0 +1,14 @@
+prefix=/home/mario/Documentos/github/MediaProcessors_selfcontained/_install_dir_x86
+exec_prefix=${prefix}
+libdir=/home/mario/Documentos/github/MediaProcessors_selfcontained/_install_dir_x86/lib
+includedir=/home/mario/Documentos/github/MediaProcessors_selfcontained/_install_dir_x86/include
+
+Name: libswscale
+Description: FFmpeg image rescaling library
+Version: 5.0.101
+Requires: 
+Requires.private: libavutil >= 56.0.100
+Conflicts:
+Libs: -L${libdir}  -lswscale 
+Libs.private: -lm
+Cflags: -I${includedir}
