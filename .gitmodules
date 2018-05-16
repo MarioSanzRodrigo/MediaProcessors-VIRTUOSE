@@ -31,10 +31,6 @@
 [submodule "3rdplibs/nasm"]
 	path = 3rdplibs/nasm
 	url = git://github.com/rantoniello/nasm.git
-[submodule "3rdplibs/LHE_c"]
-	path = 3rdplibs/LHE_c
-	url = git://github.com/jjaranda13/LHE_c.git
-	branch = lhe_develop
 [submodule "3rdplibs/uriparser"]
 	path = 3rdplibs/uriparser
 	url = git://github.com/rantoniello/uriparser.git
