@@ -1,0 +1,11 @@
+
+Ubuntu 16.04.3 LTS recommended
+
+Requierd libs:
+
+sudo apt-get install buildessential automake libtool vim libx11-dev libxext-dev
+
+Install:
+
+cd <....>/MediaProcessors-VIRTUOSE
+make
