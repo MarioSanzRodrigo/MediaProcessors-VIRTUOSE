@@ -37,3 +37,7 @@
 [submodule "3rdplibs/libconfig"]
 	path = 3rdplibs/libconfig
 	url = git://github.com/rantoniello/libconfig.git
+[submodule "3rdplibs/LHE_c"]
+	path = 3rdplibs/LHE_c
+	url = git://github.com/jjaranda13/LHE_c.git
+	branch = lhe_develop
