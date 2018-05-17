@@ -38,3 +38,6 @@
 	path = 3rdplibs/LHE_c
 	url = git://github.com/jjaranda13/LHE_c.git
 	branch = lhe_develop
+[submodule "3rdplibs/unittest"]
+	path = 3rdplibs/unittest
+	url = https://github.com/rantoniello/unittest-cpp.git
