@@ -19,9 +19,6 @@
 [submodule "3rdplibs/sdl"]
 	path = 3rdplibs/sdl
 	url = git://github.com/rantoniello/sdl.git
-[submodule "3rdplibs/unitest-cpp"]
-	path = 3rdplibs/unitest-cpp
-	url = git://github.com/rantoniello/unittest-cpp.git
 [submodule "3rdplibs/valgrind"]
 	path = 3rdplibs/valgrind
 	url = git://github.com/rantoniello/valgrind.git
