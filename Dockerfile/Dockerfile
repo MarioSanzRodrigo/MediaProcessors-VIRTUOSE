@@ -5,7 +5,7 @@ FROM ubuntu:16.04
 
 WORKDIR /home/admin
 
-ENV LD_LIBRARY_PATH=/home/admin/FFMPEG-Control-API_2/_install_dir_x86/lib
+ENV LD_LIBRARY_PATH=/home/admin/MediaProcessors-VIRTUOSE/_install_dir_x86/lib
 
 # Expose necessary ports
 EXPOSE 8553/TCP
