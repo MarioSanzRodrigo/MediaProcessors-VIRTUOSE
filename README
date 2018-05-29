@@ -1,11 +1,26 @@
+# Media Processors
 
 Ubuntu 16.04.3 LTS recommended
 
 Requierd libs:
 
+- MediaProcessors:
 sudo apt-get install buildessential automake libtool vim libx11-dev libxext-dev
 
-Install:
+
+- GamingAnywhere: 
+sudo apt-get install patch make cmake g++ pkg-config libx11-dev libxext-dev libfreetype6-dev libgl1-mesa-dev libglu1-mesa-dev libpulse-dev libasound2-dev lib32z1
+
+
+Install MediaProcessors Lib:
 
 cd <....>/MediaProcessors-VIRTUOSE
 make
+
+Install GamingAnyWhere:
+
+1. Modify env-setup file
+2. source env-setup
+3. cd ga
+4. make all
+5. make install
