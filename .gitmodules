@@ -1,6 +1,3 @@
-[submodule "MediaProcessors"]
-	path = MediaProcessors
-	url = git://github.com/m-alarcon/MediaProcessors.git
 [submodule "3rdplibs/x264"]
 	path = 3rdplibs/x264
 	url = git://github.com/rantoniello/x264.git
